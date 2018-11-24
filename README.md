@@ -1,2 +1,2 @@
 # Post-install script for elementary OS 5 Juno
-Made for personal use, please read the script carefully before executing
+Made for personal use, please read the script carefully before executing and modify it according to your needs.
