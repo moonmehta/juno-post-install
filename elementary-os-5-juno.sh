@@ -12,6 +12,9 @@ sudo apt -y install firefox chromium-browser --no-install-recommends
 # Install some apps from Ubuntu repos
 sudo apt -y install gnome-disk-utility gnome-usage deepin-picker mpv git
 
+# Install AppCenter apps
+sudo apt -y install com.github.donadigo.eddy com.github.davidmhewitt.torrential com.github.davidmhewitt.clipped com.github.donadigo.appeditor com.github.peteruithoven.resizer
+
 # Enable PPAs
 sudo apt -y install software-properties-gtk --no-install-recommends
 
