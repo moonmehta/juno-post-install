@@ -19,8 +19,8 @@ sudo apt -y install com.github.donadigo.eddy com.github.davidmhewitt.torrential 
 sudo apt -y install software-properties-gtk --no-install-recommends
 
 # LibreOffice done right
-sudo add-apt-repository -y ppa:libreoffice/ppa ppa:philip.scott/elementary-tweaks
-sudo apt -y install libreoffice elementary-tweaks ttf-mscorefonts-installer
+sudo add-apt-repository -y ppa:libreoffice/ppa
+sudo apt -y install libreoffice ttf-mscorefonts-installer
 
 # Install Elementary tweaks
 sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
