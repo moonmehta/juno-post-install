@@ -26,7 +26,7 @@ sudo apt -y install libreoffice ttf-mscorefonts-installer
 sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
 sudo apt -y install elementary-tweaks
 
-#Get updated versions of Geary mail client
+# Get updated versions of Geary mail client
 sudo add-apt-repository ppa:geary-team/releases
 sudo apt install geary
 
