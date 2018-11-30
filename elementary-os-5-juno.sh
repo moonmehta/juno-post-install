@@ -4,7 +4,7 @@
 sudo apt -y install xserver-xorg-input-synaptics
 
 # Remove stuff
-sudo apt -y autoremove io.elementary.camera epiphany-browser noise
+sudo apt -y autoremove io.elementary.camera epiphany-browser pantheon-mail noise
 
 # Minimal browser installs
 sudo apt -y install firefox chromium-browser --no-install-recommends
@@ -25,6 +25,10 @@ sudo apt -y install libreoffice ttf-mscorefonts-installer
 # Install Elementary tweaks
 sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
 sudo apt -y install elementary-tweaks
+
+#Get updated versions of Geary mail client
+sudo add-apt-repository ppa:geary-team/releases
+sudo apt install geary
 
 # Update and Upgrade the packages
 sudo apt -y update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
