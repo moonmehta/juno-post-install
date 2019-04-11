@@ -9,36 +9,40 @@ sudo apt -y autoremove io.elementary.camera epiphany-browser noise pantheon-calc
 # Minimal browser installs
 sudo apt -y install firefox chromium-browser --no-install-recommends
 
-# Install some apps from Ubuntu repos
+# Get some apps from Ubuntu repos
 sudo apt -y install gnome-disk-utility gnome-software gnome-calculator deepin-picker mpv git ttf-mscorefonts-installer
 
-# Install AppCenter apps
+# Get AppCenter apps
 sudo apt -y install com.github.davidmhewitt.torrential com.github.davidmhewitt.clipped com.github.donadigo.appeditor com.github.peteruithoven.resizer
 
 # Enable PPAs
 sudo apt -y install software-properties-gtk --no-install-recommends
 
-# Install Elementary tweaks
+# Get elementary tweaks
 sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
 sudo apt -y install elementary-tweaks
 
-# Cleanups and upgrades
-sudo apt autoremove firefox-locale-* language-pack-* xul-ext-ubufox
-sudo apt install firefox-locale-en language-pack-en language-pack-gnome-en
-sudo apt -y update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
-
-# Install Dark dock theme
+# Get Dark dock theme
 git clone https://github.com/dikiaap/frost-plank-theme
 cd frost-plank-theme
 ./install.sh
 cd ..
 rmdir frost-plank-theme
 
-# Install Flatpak apps
-sudo add-apt-repository ppa:alexlarsson/flatpak
+# Get Flatpak apps
+sudo add-apt-repository -y ppa:alexlarsson/flatpak
 sudo apt install flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak -y install flathub org.gnome.Geary
 Reboot the system
 
-# Install Snap apps
-telegram-desktop
+# Get Snap apps
+sudo snap -y install telegram-desktop
+
+# Install latest kernel+graphics
+sudo apt -y install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04
+
+# Cleanups and upgrades
+sudo apt autoremove firefox-locale-* language-pack-* xul-ext-ubufox
+sudo apt install firefox-locale-en language-pack-en language-pack-gnome-en
+sudo apt -y update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean
