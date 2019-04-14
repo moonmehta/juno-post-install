@@ -18,9 +18,10 @@ sudo apt -y install com.github.davidmhewitt.torrential com.github.davidmhewitt.c
 # Enable PPAs
 sudo apt -y install software-properties-gtk --no-install-recommends
 
-# Get elementary tweaks
+# Get elementary tweaks and Geary
 sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
-sudo apt -y install elementary-tweaks
+sudo add-apt-repository ppa:geary-team/releases
+sudo apt -y install elementary-tweaks geary
 
 # Get Dark dock theme
 git clone https://github.com/dikiaap/frost-plank-theme
@@ -33,7 +34,6 @@ rmdir frost-plank-theme
 sudo add-apt-repository -y ppa:alexlarsson/flatpak
 sudo apt install flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak -y install flathub org.gnome.Geary
 Reboot the system
 
 # Get Snap apps
