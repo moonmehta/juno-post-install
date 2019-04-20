@@ -18,10 +18,9 @@ sudo apt -y install com.github.davidmhewitt.torrential com.github.davidmhewitt.c
 # Enable PPAs
 sudo apt -y install software-properties-gtk --no-install-recommends
 
-# Get elementary tweaks and Geary
+# Get elementary tweaks
 sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
-sudo add-apt-repository ppa:geary-team/releases
-sudo apt -y install elementary-tweaks geary
+sudo apt -y install elementary-tweaks
 
 # Get Dark dock theme
 git clone https://github.com/dikiaap/frost-plank-theme
@@ -35,9 +34,7 @@ sudo add-apt-repository -y ppa:alexlarsson/flatpak
 sudo apt install flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 Reboot the system
-
-# Get Snap apps
-sudo snap -y install telegram-desktop
+flatpak install flathub org.telegram.desktop org.gnome.Geary
 
 # Install latest kernel+graphics
 sudo apt -y install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04
